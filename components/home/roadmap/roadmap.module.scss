@@ -1,0 +1,258 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1156px;
+	margin: 0 auto;
+	margin-top: 120px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+}
+
+.inside .title {
+	position: relative;
+
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: center;
+
+	color: $color-brown;
+	font-family: $font1;
+	font-size: 54px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	word-spacing: 4px;
+
+	span {
+		color: $color-white;
+	}
+}
+
+.inside .content {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+}
+
+.inside .content .faces {
+	position: relative;
+	width: 74px;
+	min-width: 74px;
+	max-width: 74px;
+	height: auto;
+
+	display: flex;
+	gap: 18px;
+	flex-direction: column;
+}
+
+.inside .content .faces .oneFace {
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	opacity: 0.5;
+	filter: grayscale(0.5);
+
+	transform: scaleX(-1);
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.inside .content .faces .oneFace[data-filled='true'] {
+	opacity: 1;
+	filter: none;
+}
+
+.inside .oneSide {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 170px;
+}
+
+.inside .oneSide .roadmapLine {
+	position: absolute;
+
+	left: -160px;
+
+	width: 112px;
+	height: auto;
+
+	top: 45%;
+	translate: 0 -50%;
+
+	pointer-events: none;
+}
+
+.inside .oneSide .onePhase {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+}
+
+.inside .oneSide .onePhase .phaseTitle {
+	position: relative;
+
+	display: flex;
+
+	p {
+		position: relative;
+		padding: 16px 24px;
+
+		color: $color-darkbrown;
+		font-family: $font1;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 100%;
+
+		text-align: center;
+	}
+
+	border-radius: 8px;
+	border: 2px solid $color-darkbrown2;
+	background: $color-brown2;
+	box-shadow: -4px 4px 0px 0px rgba($color-darkbrown3, 0.5);
+
+	transform: rotate(-2.7deg);
+}
+
+.inside .oneSide .onePhase .points {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.inside .oneSide .onePhase .points .onePoint {
+	position: relative;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: 0.28px;
+}
+
+.inside .oneSide[data-side='right'] {
+	margin-top: 110px;
+	.onePhase {
+		align-items: flex-end;
+	}
+
+	.onePhase .phaseTitle {
+		background: $color-white;
+		transform: rotate(2.7deg);
+	}
+
+	.roadmapLine {
+		left: auto;
+		right: -160px;
+
+		transform: scaleX(-1);
+	}
+}
+
+// RWD
+@media (max-width: 1520px) {
+	.inside .oneSide .roadmapLine {
+		left: -120px;
+
+		width: 90px;
+	}
+
+	.inside .oneSide[data-side='right'] {
+		.roadmapLine {
+			left: auto;
+			right: -120px;
+		}
+	}
+}
+
+@media (max-width: 1050px) {
+	.section .inside {
+		flex-wrap: wrap;
+
+		margin-top: 60px;
+	}
+
+	.inside .oneSide .roadmapLine {
+		display: none;
+	}
+}
+
+@media (max-width: 920px) {
+	.inside .content .faces {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.inside .content {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.inside .oneSide .onePhase {
+		align-items: center;
+	}
+
+	.inside .oneSide {
+		gap: 48px;
+	}
+
+	.inside .oneSide[data-side='right'] {
+		margin-top: 48px;
+		.onePhase {
+			align-items: center;
+		}
+	}
+
+	.inside .oneSide .onePhase {
+		width: 100%;
+	}
+
+	.inside .oneSide .onePhase .points {
+		width: 100%;
+	}
+
+	.inside .oneSide .onePhase .points .onePoint {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 650px) {
+	.inside .content .title {
+		font-size: 48px;
+	}
+}

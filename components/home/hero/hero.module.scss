@@ -1,0 +1,157 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1156px;
+	margin: 0 auto;
+	margin-top: 65px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 42px;
+}
+
+.inside .content {
+	position: relative;
+
+	width: 100%;
+	max-width: 650px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.inside .content .title {
+	position: relative;
+
+	color: $color-brown;
+	font-family: $font1;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	word-spacing: 4px;
+
+	span {
+		color: $color-white;
+	}
+}
+
+.inside .content .desc {
+	position: relative;
+	margin-top: 16px;
+
+	width: 100%;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 133%;
+	letter-spacing: 0.24px;
+
+	white-space: pre-line;
+	word-break: break-word;
+}
+
+.inside .content .contentButtons {
+	position: relative;
+	margin-top: 32px;
+
+	display: flex;
+	gap: 42px;
+	align-items: center;
+}
+
+.inside .content .contentButtons .longBtn {
+	position: relative;
+	height: 52px;
+
+	p {
+		padding: 0px 24px;
+		font-size: 24px;
+	}
+}
+
+.inside .content .contentButtons .socialBtn {
+	position: relative;
+
+	p {
+		font-size: 20px;
+	}
+}
+
+.inside .media {
+	position: relative;
+
+	width: 90%;
+	max-width: 415px;
+	height: auto;
+
+	img {
+		transform: rotate(-171deg);
+	}
+}
+
+// RWD
+@media (max-width: 1050px) {
+	.section .inside {
+		flex-wrap: wrap;
+	}
+
+	.inside .content {
+		width: 100%;
+		max-width: 100%;
+
+		align-items: center;
+	}
+
+	.inside .content .title {
+		text-align: center;
+	}
+
+	.inside .content .desc {
+		text-align: center;
+	}
+
+	.inside .media {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 650px) {
+	.inside .content .contentButtons {
+		flex-wrap: wrap;
+		gap: 24px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.inside .content .contentButtons .longBtn {
+		width: 50%;
+	}
+
+	.inside .content .contentButtons .socialBtn {
+		width: calc(50% - 12px);
+	}
+
+	.inside .content .title {
+		font-size: 48px;
+	}
+
+	.inside .content .desc {
+		font-size: 22px;
+		white-space: normal;
+	}
+}

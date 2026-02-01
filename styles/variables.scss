@@ -1,0 +1,27 @@
+// filters: https://filtergen.vercel.app
+$color-black: #000;
+$color-white: #fff;
+$color-white-filter: brightness(0) invert(1);
+
+$color-brown: #584b2e;
+$color-brown-filter: brightness(0) saturate(100%) invert(28%) sepia(28%)
+	saturate(624%) hue-rotate(3deg) brightness(91%) contrast(89%);
+
+$color-brown2: #edc675;
+
+$color-darkbrown: #362e1e;
+$color-darkbrown-filter: brightness(0) saturate(100%) invert(13%) sepia(27%)
+	saturate(799%) hue-rotate(2deg) brightness(99%) contrast(86%);
+
+$color-darkbrown2: #5f533a;
+$color-darkbrown3: #3d3627;
+
+$color-scroll: $color-brown;
+$color-background: #dac78c;
+$color-text: $color-darkbrown;
+
+$font1: 'Magic Club';
+$font2: 'Presso Matcha';
+$font3: 'Supersonic Rocketship';
+$animation1: 0.3s;
+$animation2: 1s;

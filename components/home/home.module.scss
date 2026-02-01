@@ -1,0 +1,13 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+
+	min-height: 100dvh;
+}
+
+// RWD
+@media (max-width: 780px) {
+}

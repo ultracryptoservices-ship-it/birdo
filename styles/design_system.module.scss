@@ -1,0 +1,113 @@
+@use '@/styles/variables.scss' as *;
+
+.button_brown {
+	border-radius: 8px;
+	border: 2px solid $color-darkbrown2;
+	background: $color-brown2;
+	box-shadow: -4px 4px 0px 0px rgba($color-darkbrown3, 0.5);
+
+	p {
+		color: $color-darkbrown;
+		font-family: $font3;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		letter-spacing: 0.14px;
+		text-transform: uppercase;
+
+		text-wrap: nowrap;
+	}
+
+	transition: box-shadow $animation1;
+}
+
+.button_brown:hover {
+	box-shadow: -6px 6px 0px 0px rgba($color-darkbrown3, 0.5);
+}
+
+.button_white {
+	border-radius: 8px;
+	border: 2px solid $color-darkbrown2;
+	background: $color-white;
+	box-shadow: -4px 4px 0px 0px rgba($color-darkbrown3, 0.5);
+
+	p {
+		color: $color-darkbrown;
+		font-family: $font3;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		letter-spacing: 0.14px;
+		text-transform: uppercase;
+
+		text-wrap: nowrap;
+	}
+
+	transition: box-shadow $animation1;
+}
+
+.button_white:hover {
+	box-shadow: -6px 6px 0px 0px rgba($color-darkbrown3, 0.5);
+}
+
+.button_social {
+	border-radius: 0px;
+	border: none;
+	background: none;
+	box-shadow: none;
+
+	display: flex;
+	gap: 16px;
+	align-items: center;
+
+	span {
+		position: relative;
+
+		width: 38px;
+		min-width: 38px;
+		height: 38px;
+	}
+
+	span::before {
+		position: absolute;
+		content: '';
+
+		border-radius: 100%;
+		border: 2px solid $color-darkbrown2;
+		background: $color-brown2;
+		box-shadow: -2px 2px 0px 0px rgba($color-darkbrown3, 0.5);
+
+		left: 0px;
+		top: 0px;
+
+		width: 100%;
+		height: 100%;
+
+		transition: box-shadow $animation1;
+	}
+
+	p {
+		position: relative;
+
+		color: $color-darkbrown;
+		font-family: $font2;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		letter-spacing: 0.2px;
+		text-transform: uppercase;
+
+		text-wrap: nowrap;
+	}
+}
+
+.button_social:hover span::before {
+	box-shadow: -4px 4px 0px 0px rgba($color-darkbrown3, 0.5);
+}
+
+// .text_gradient {
+// 	background: linear-gradient(91deg, $color-purple 0%, $color-purple2 100%);
+// 	background-clip: text;
+// 	-webkit-background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// }

@@ -1,0 +1,94 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1156px;
+	margin: 0 auto;
+
+	padding-top: 40px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.inside .left {
+	position: relative;
+
+	display: flex;
+	gap: 64px;
+	align-items: center;
+}
+
+.inside .left .logo {
+	position: relative;
+
+	width: 62px;
+	height: auto;
+}
+
+.inside .left .menu {
+	position: relative;
+
+	display: flex;
+	gap: 34px;
+	align-items: center;
+}
+
+.inside .left .menu .link {
+	position: relative;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	opacity: 0.7;
+	transition: opacity $animation1;
+}
+
+.inside .left .menu .link:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.inside .right {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.inside .right .btn {
+	position: relative;
+	height: 42px;
+
+	p {
+		padding: 0px 24px;
+		font-size: 14px;
+	}
+}
+
+// RWD
+@media (max-width: 1050px) {
+	.inside .left .menu {
+		display: none;
+	}
+}
+
+@media (max-width: 650px) {
+	.section .inside {
+		padding-top: 20px;
+	}
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+	font-family: 'Supersonic Rocketship';
+	src: url('/fonts/supersonic_rocketship-webfont.woff2') format('woff2'),
+		url('/fonts/supersonic_rocketship-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Magic Club';
+	src: url('/fonts/magic_club-webfont.woff2') format('woff2'),
+		url('/fonts/magic_club-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Presso Matcha';
+	src: url('/fonts/presso_matcha-webfont.woff2') format('woff2'),
+		url('/fonts/presso_matcha-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

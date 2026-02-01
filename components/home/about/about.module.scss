@@ -1,0 +1,165 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1156px;
+	margin: 0 auto;
+	margin-top: 120px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 42px;
+}
+
+.inside .content {
+	position: relative;
+
+	order: 2;
+
+	width: 100%;
+	max-width: 650px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.inside .content .title {
+	position: relative;
+
+	color: $color-brown;
+	font-family: $font1;
+	font-size: 54px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	word-spacing: 4px;
+
+	span {
+		color: $color-white;
+	}
+}
+
+.inside .content .desc {
+	position: relative;
+	margin-top: 16px;
+
+	width: 100%;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 133%;
+	letter-spacing: 0.24px;
+
+	white-space: pre-line;
+}
+
+.inside .content .contentButtons {
+	position: relative;
+	margin-top: 32px;
+
+	display: flex;
+	gap: 42px;
+	align-items: center;
+}
+
+.inside .content .contentButtons .longBtn {
+	position: relative;
+	height: 52px;
+
+	p {
+		padding: 0px 24px;
+		font-size: 24px;
+	}
+}
+
+.inside .media {
+	position: relative;
+
+	order: 1;
+	margin-left: -75px;
+
+	width: 100%;
+	max-width: 520px;
+	height: auto;
+}
+
+.inside .media::before {
+	position: absolute;
+	content: '';
+
+	left: 0px;
+	bottom: 0px;
+
+	width: 100%;
+	height: 225px;
+
+	pointer-events: none;
+
+	background: linear-gradient(
+		to bottom,
+		rgba($color-background, 0) 0%,
+		$color-background 100%
+	);
+
+	z-index: 2;
+}
+
+// RWD
+@media (max-width: 1050px) {
+	.section .inside {
+		flex-wrap: wrap;
+
+		margin-top: 60px;
+	}
+
+	.inside .content {
+		width: 100%;
+		max-width: 100%;
+
+		align-items: center;
+	}
+
+	.inside .content .title {
+		text-align: center;
+	}
+
+	.inside .content .desc {
+		text-align: center;
+	}
+
+	.inside .media {
+		margin: 0 auto;
+		order: 2;
+	}
+}
+
+@media (max-width: 650px) {
+	.inside .content .contentButtons {
+		flex-wrap: wrap;
+		gap: 24px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.inside .content .title {
+		font-size: 48px;
+	}
+
+	.inside .content .desc {
+		font-size: 22px;
+		white-space: normal;
+	}
+}

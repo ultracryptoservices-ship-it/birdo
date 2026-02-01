@@ -1,0 +1,211 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1156px;
+	margin: 0 auto;
+	margin-top: 120px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	padding-bottom: 40px;
+}
+
+.inside .top {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inside .top .topLeft {
+	position: relative;
+
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+
+.inside .top .topLeft img {
+	position: relative;
+
+	width: 62px;
+	height: auto;
+}
+
+.inside .top .topLeft p {
+	position: relative;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	letter-spacing: 0.24px;
+}
+
+.inside .top .topRight {
+	position: relative;
+
+	display: flex;
+	gap: 34px;
+	row-gap: 8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.inside .top .topRight .link {
+	position: relative;
+
+	color: $color-darkbrown;
+	font-family: $font2;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	opacity: 0.7;
+	transition: opacity $animation1;
+}
+
+.inside .top .topRight .link:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.inside .center {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inside .center .centerLeft {
+	position: relative;
+
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.inside .center .centerLeft .btn {
+	position: relative;
+	height: 52px;
+
+	p {
+		padding: 0px 24px;
+		font-size: 24px;
+	}
+}
+
+.inside .center .centerRight {
+	position: relative;
+
+	display: flex;
+	gap: 42px;
+	align-items: center;
+}
+
+.inside .center .centerRight .socialBtn {
+	position: relative;
+
+	p {
+		font-size: 20px;
+	}
+}
+
+.inside .bottom {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+
+	p {
+		position: relative;
+
+		color: $color-darkbrown;
+		font-family: $font2;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		letter-spacing: 0.24px;
+
+		text-align: center;
+	}
+}
+
+// RWD
+@media (max-width: 1150px) {
+	.inside .top {
+		width: 100%;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	.inside .top .topLeft {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.inside .top .topRight {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 850px) {
+	.inside .center {
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	.inside .center .centerLeft {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.inside .center .centerRight {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 650px) {
+	.section .inside {
+		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.inside .top .topRight {
+		display: none;
+	}
+
+	.inside .center .centerLeft {
+		display: none;
+	}
+
+	.inside .top .topLeft {
+		flex-wrap: wrap;
+		gap: 16px;
+		justify-content: center;
+
+		p {
+			display: none;
+		}
+	}
+}
