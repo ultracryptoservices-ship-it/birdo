@@ -68,7 +68,7 @@ export default function Footer(props) {
 					<div className={styles.centerRight}>
 						<Button
 							className={`${design.button_social} ${styles.socialBtn}`}
-							href="https://google.com"
+							href="https://t.me/Birdo_Bird"
 							target="_blank"
 							disableRipple
 						>
@@ -85,7 +85,7 @@ export default function Footer(props) {
 						</Button>
 						<Button
 							className={`${design.button_social} ${styles.socialBtn}`}
-							href="https://google.com"
+							href="https://x.com/BirdoBirdSolana"
 							target="_blank"
 							disableRipple
 						>
